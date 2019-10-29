@@ -12,6 +12,7 @@ RUN mkdir -p /opt/player \
 WORKDIR /opt/player
 COPY * /opt/player/
 WORKDIR /opt/player/app
+ENV GIT_SSL_NO_VERIFY 1
 RUN npm set progress=false
 RUN npm install  --unsafe-perm 
 RUN npm run deploy
