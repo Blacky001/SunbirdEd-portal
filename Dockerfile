@@ -7,7 +7,7 @@ ENV HTTPS_PROXY "http://172.22.218.218:8085"
 ENV NO_PROXY "*.mindtree.com,*.cloudapp.azure.com,172.22.*.*,172.23.*.*"
 ENV http_proxy "http://172.22.218.218:8085"
 ENV https_proxy "http://172.22.218.218:8085"
-ENV no_proxy "*.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134"
+ENV no_proxy "*.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,github.com"
 RUN mkdir -p /opt/player \
 WORKDIR /opt/player
 COPY * /opt/player/
@@ -37,7 +37,7 @@ ENV HTTPS_PROXY "http://172.22.218.218:8085"
 ENV NO_PROXY "*.mindtree.com,*.cloudapp.azure.com,172.22.*.*,172.23.*.*"
 ENV http_proxy "http://172.22.218.218:8085"
 ENV https_proxy "http://172.22.218.218:8085"
-ENV no_proxy "*.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134"
+ENV no_proxy "*.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,github.com"
 WORKDIR /home/sunbird/app_dist
 # This is the short commit hash from which this image is built from
 # This label is assigned at time of image creation
