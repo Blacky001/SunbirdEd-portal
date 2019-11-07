@@ -4,7 +4,7 @@ MAINTAINER "Rajesh Rajendran <rajesh.r@optit.co>"
 USER root
 ENV HTTP_PROXY "http://172.22.218.218:8085"
 ENV HTTPS_PROXY "http://172.22.218.218:8085"
-ENV NO_PROXY "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,github.com"
+ENV NO_PROXY "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134"
 ENV http_proxy "http://172.22.218.218:8085"
 ENV https_proxy "http://172.22.218.218:8085"
 ENV no_proxy "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,github.com"
@@ -13,7 +13,7 @@ WORKDIR /opt/player
 COPY * /opt/player/
 WORKDIR /opt/player/app
 ENV GIT_SSL_NO_VERIFY 1
-# RUN npm set strict-ssl=false
+RUN npm set strict-ssl=false
 RUN npm set progress=false
 RUN npm install  --unsafe-perm 
 RUN npm run deploy
@@ -35,7 +35,7 @@ RUN chown -R sunbird:sunbird /home/sunbird
 USER sunbird
 ENV HTTP_PROXY "http://172.22.218.218:8085"
 ENV HTTPS_PROXY "http://172.22.218.218:8085"
-ENV NO_PROXY "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,github.com"
+ENV NO_PROXY "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134"
 ENV http_proxy "http://172.22.218.218:8085"
 ENV https_proxy "http://172.22.218.218:8085"
 ENV no_proxy "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,github.com"
